@@ -1,0 +1,20 @@
+function gørNoget () {
+    pins.digitalWritePin(DigitalPin.P7, 0)
+    pins.digitalWritePin(DigitalPin.P6, 0)
+    pins.digitalWritePin(DigitalPin.P4, 0)
+    pins.digitalWritePin(DigitalPin.P3, 0)
+}
+led.enable(false)
+gørNoget()
+basic.forever(function () {
+    basic.pause(1000)
+    pins.digitalWritePin(DigitalPin.P7, 1)
+    basic.pause(1000)
+    pins.digitalWritePin(DigitalPin.P6, 1)
+    basic.pause(1000)
+    pins.digitalWritePin(DigitalPin.P4, 1)
+    basic.pause(1000)
+    pins.digitalWritePin(DigitalPin.P3, 1)
+    basic.pause(2000)
+    gørNoget()
+})
