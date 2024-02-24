@@ -6,6 +6,7 @@ function gørNoget () {
 }
 led.enable(false)
 gørNoget()
+let start = input.runningTime()
 basic.forever(function () {
     basic.pause(1000)
     pins.digitalWritePin(DigitalPin.P7, 1)
